@@ -29,12 +29,14 @@ function mario() {
   // WRITE YOUR EXERCISE 1 CODE HERE
 height = prompt("how tall are you", "");
  if (24>height>0){
-   var div = document.getElementById("mario-easy-output");
-   div.innerHTML = `${height}`
 }else{
   height =  prompt("how tall are you?( keep it between 1 and 23!)", "");
 }
+for (let i= height; i>height; i++){
 
+}
+var div = document.getElementById("mario-easy-output");
+div.innerHTML = `${height}`
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
