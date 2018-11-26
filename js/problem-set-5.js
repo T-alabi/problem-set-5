@@ -124,7 +124,7 @@ function credit() {
 
   // WRITE YOUR EXERCISE 3 CODE HERE
 card = prompt("whats your cards numbers", "");
-if (card="string"){
+if (){
   card=prompt("enter only integers please!", "");
 }
 var div = document.getElementById("credit-output");
@@ -167,13 +167,13 @@ div.innerHTML = ``
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-let numb = ((Math.random() * 1001) - 100);
-let guess;
-var guess = prompt("what do you think you think think the number is?", "");
-if (guess>numb){
+  let guess = prompt("what do you think you think think the number is?", "");
+let numb = Math.floor(Math.random() * 1000) + 1;
+
+if (guess > numb){
   var div = document.getElementById("guess-output");
-  div.innerHTML = `${guess} is too high!`
-}else if (guess<numb){
+  div.innerHTML = `${guess} is too high!`}
+  else if (guess < numb){
   var div = document.getElementById("guess-output");
   div.innerHTML = `${guess} is too low!`
 }
