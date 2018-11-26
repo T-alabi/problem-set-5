@@ -29,14 +29,13 @@ function mario() {
   // WRITE YOUR EXERCISE 1 CODE HERE
 height = prompt("how tall are you", "");
  if (24>height>0){
+   for(let i=height; i < height; i--){
+   }
 }else{
   height =  prompt("how tall are you?( keep it between 1 and 23!)", "");
 }
-for (let i= height; i>height; i++){
-
-}
 var div = document.getElementById("mario-easy-output");
-div.innerHTML = `${height}`
+div.innerHTML = ``
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -124,7 +123,12 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-
+card = prompt("whats your cards numbers", "");
+if (card="string"){
+  card=prompt("enter only integers please!", "");
+}
+var div = document.getElementById("credit-output");
+div.innerHTML = ``
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
