@@ -221,10 +221,13 @@ function hurricane() {
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
 windspeed = prompt("whats the speed outside?", "");
-
-if (73>windspeed>39){
+let tropical = ((windspeed >73)||(windspeed<39))
+while (windspeed = tropical){
   var div = document.getElementById("hurricane-output");
   div.innerHTML=`${windspeed} is a tropical storm!`
+if(windspeed!=tropical){
+  windspeed = prompt("use inegetrs only", "");
+}
 }
 
   ///////////////////////////////// DO NOT MODIFY
