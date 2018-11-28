@@ -27,15 +27,25 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-height = prompt("how tall are you", "");
- if(24>height>0){
-   for(let i=height; i < height; i--){
-   }
-}else{
-  height =  prompt("how tall are you?( keep it between 1 and 23!)", "");
+
+let div = document.getElementById("mario-easy-output");
+do {
+  height = Number(prompt("How tall should the tower be from 1 to 23"));
+} while (height < 1 || height > 23);
+
+let total = "";
+for (let i=0; i<height; i++){
+  let row = "";
+  for (let i2=0; i2<(height-i-1); i2++){
+    row = row+"&nbsp;";
+  }
+  row = row+"#";
+  for (let i3=0; i3<(i+1); i3++){
+    row = row+"#";
+  }
+  total = total+row+"<br/>";
 }
-var div = document.getElementById("mario-easy-output");
-div.innerHTML = ``
+div.innerHTML = "<code>" + total + "</code>";
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -70,7 +80,29 @@ function marioAgain() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 2 CODE HERE
+  let div = document.getElementById("mario-hard-output");
+    do {
+      height = Number(prompt("How tall would you like your tower?"));
+    } while (height < 1 || height > 23);
 
+    let total = "";
+    for (let i=0; i<height; i++){
+      let row = "";
+      for (let i2=0; i2<(height-i-1); i2++){
+        row = row+"&nbsp;" /*space*/;
+      }
+      row = row+"#";
+      for (let i3=0; i3<(i+1); i3++){
+        row = row+"#";
+      }
+      row = row+"&nbsp;&nbsp;#";
+      for (let i4=0; i4<(i+1); i4++){
+        row = row+"#";
+      }
+
+      total = total+row+"<br/>";
+    }
+    div.innerHTML = "<code>" + total + "</code>";
   //////////////////////////////// DO NOT MODIFY
   check('mario-again', height); // DO NOT MODIFY
   //////////////////////////////// DO NOT MODIFY
