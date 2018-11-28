@@ -167,29 +167,25 @@ div.innerHTML = ``
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-  let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
   let guess;
-  do {
-    if (guess>numb){
-        guess = prompt("Will you guess what the number is?", "");
-        var div = document.getElementById("guess-output");
-        div.innerHTML = `${guess} is too high!`
-      }
-      else if (guess<numb){
-      var div = document.getElementById("guess-output");
-      div.innerHTML =` ${guess} is to low!`
-      guess = prompt("try again wont you?", "");
-   } else if (guess==numb) {
-      var div = document.getElementById("guess-output");
-      div.innerHTML =` ${guess} is correct!`
-      break;
-    }
- } while (guess != numb);
+  let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
+  guess = prompt("Will you guess what the number is?", "");
 
- /*while (guess % 1 != 0) {
-   guess = prompt("try again wont you?", "");
+  if (guess > numb){
+      var div = document.getElementById("guess-output");
+      div.innerHTML = `${guess} is too high!`
+      guess = prompt("try again?", "");
+    }
+    else if (guess < numb){
+    var div = document.getElementById("guess-output");
+    div.innerHTML =` ${guess} is to low!`
  }
-*/
+
+  if (guess===numb) {
+    var div = document.getElementById("guess-output");
+    div.innerHTML =` ${guess} is correct!`
+  }
+
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
