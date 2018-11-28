@@ -167,14 +167,13 @@ div.innerHTML = ``
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
-  let guess = 1;
-
- let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
+  let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
+  let guess;
   do {
     if (guess>numb){
+        guess = prompt("Will you guess what the number is?", "");
         var div = document.getElementById("guess-output");
         div.innerHTML = `${guess} is too high!`
-        guess = prompt("try again wont you?", "");
       }
       else if (guess<numb){
       var div = document.getElementById("guess-output");
@@ -187,10 +186,10 @@ function guess() {
     }
  } while (guess != numb);
 
- while (guess % 1 != 0) {
+ /*while (guess % 1 != 0) {
    guess = prompt("try again wont you?", "");
  }
-
+*/
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
