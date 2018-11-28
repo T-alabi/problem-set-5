@@ -29,14 +29,13 @@ function mario() {
   // WRITE YOUR EXERCISE 1 CODE HERE
 height = prompt("how tall are you", "");
  if (24>height>0){
+   for(let i=height; i < height; i--){
+   }
 }else{
   height =  prompt("how tall are you?( keep it between 1 and 23!)", "");
 }
-for (let i= height; i>height; i++){
-
-}
 var div = document.getElementById("mario-easy-output");
-div.innerHTML = `${height}`
+div.innerHTML = ``
   ////////////////////////// DO NOT MODIFY
   check('mario', height); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
@@ -124,7 +123,12 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-
+card = prompt("whats your cards numbers", "");
+if (){
+  card=prompt("enter only integers please!", "");
+}
+var div = document.getElementById("credit-output");
+div.innerHTML = ``
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
@@ -163,7 +167,16 @@ function credit() {
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
+  let guess = prompt("what do you think you think think the number is?", "");
+let numb = Math.floor(Math.random() * 1000) + 1;
 
+if (guess > numb){
+  var div = document.getElementById("guess-output");
+  div.innerHTML = `${guess} is too high!`}
+  else if (guess < numb){
+  var div = document.getElementById("guess-output");
+  div.innerHTML = `${guess} is too low!`
+}
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
