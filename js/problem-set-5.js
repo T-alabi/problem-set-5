@@ -27,15 +27,10 @@ function mario() {
   ////////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 1 CODE HERE
-  let x = ((height>23)||(height<1));
 let div = document.getElementById("mario-easy-output");
 do {
   height = Number(prompt("How tall should the tower be from 1 to 23"));
-} while (height < 1 || height > 23);
-
-if (height != x){
-  height = Number(prompt("How tall should the tower be from 1 to 23, (numbers only please!)"));
-}
+}while (height < 1 || height > 23)
 
 let total = "";
 for (let i=0; i<height; i++){
