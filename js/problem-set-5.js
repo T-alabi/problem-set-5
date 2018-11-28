@@ -123,12 +123,7 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-card = prompt("whats your cards numbers", "");
-if (card>4){
-  card=prompt("enter only integers please!", "");
-}
-var div = document.getElementById("credit-output");
-div.innerHTML = ``
+
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
@@ -170,14 +165,22 @@ function guess() {
   let guess;
    guess = prompt("care to take a guess?", "");
  let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
- do{
+  do {
     if (guess>numb){
+        var div = document.getElementById("guess-output");
+        div.innerHTML = `${guess} is too high!`
+        guess = prompt("try again wont you?", "");
+      }
+      else if (guess<numb){
       var div = document.getElementById("guess-output");
-      div.innerHTML = `${guess} is too high!`}
-      else{
-    var div = document.getElementById("guess-output");
-    div.innerHTML =` ${guess} is to low!`;}
+      div.innerHTML =` ${guess} is to low!`
+      guess = prompt("try again wont you?", "");
+   }
  }while(guess!=numb);
+ if(guess===numb) {
+   var div = document.getElementById("guess-output");
+   div.innerHTML =` ${guess} is correct!`
+ }
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
