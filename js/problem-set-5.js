@@ -28,7 +28,7 @@ function mario() {
 
   // WRITE YOUR EXERCISE 1 CODE HERE
 height = prompt("how tall are you", "");
- if (24>height>0){
+ if(24>height>0){
    for(let i=height; i < height; i--){
    }
 }else{
@@ -177,6 +177,25 @@ if (guess > numb){
   var div = document.getElementById("guess-output");
   div.innerHTML = `${guess} is too low!`
 }
+  let guess;
+   guess = prompt("care to take a guess?", "");
+ let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
+  do {
+    if (guess>numb){
+        var div = document.getElementById("guess-output");
+        div.innerHTML = `${guess} is too high!`
+        guess = prompt("try again wont you?", "");
+      }
+      else if (guess<numb){
+      var div = document.getElementById("guess-output");
+      div.innerHTML =` ${guess} is to low!`
+      guess = prompt("try again wont you?", "");
+   }
+ }while(guess!=numb);
+ if(guess===numb) {
+   var div = document.getElementById("guess-output");
+   div.innerHTML =` ${guess} is correct!`
+ }
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
