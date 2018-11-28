@@ -220,6 +220,12 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
+windspeed = prompt("whats the speed outside?", "");
+
+if (73>windspeed>39){
+  var div = document.getElementById("hurricane-output");
+  div.innerHTML=`${windspeed} is a tropical storm!`
+}
 
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
