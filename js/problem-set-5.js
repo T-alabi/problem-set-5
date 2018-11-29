@@ -197,11 +197,11 @@ function guess() {
   // WRITE YOUR EXERCISE 4 CODE HERE
   let tries;
   let guess;
-  let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
+  let numb = Math.floor(Math.random() * 1000) + 1; /*Change to 1000 when done*/
 
 for ( tries = 0; guess !=numb; tries++){
   guess = prompt("Will you guess what the number is?", "");
-  while (guess <1 || guess >10){
+  while (guess <1 || guess >1000){
     guess = prompt("Guess what the number is ( 1-1000)");
   }
   if (guess > numb) {
