@@ -82,7 +82,7 @@ function marioAgain() {
   let div = document.getElementById("mario-hard-output");
     do {
       height = Number(prompt("How tall would you like your tower?"));
-    } while (height < 1 || height > 23);
+    } while (Number.isInteger(height) == false || height < 1 || height > 23)
 
     let total = "";
     for (let i=0; i<height; i++){
