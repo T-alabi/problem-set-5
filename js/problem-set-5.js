@@ -155,9 +155,6 @@ function credit() {
 
   // WRITE YOUR EXERCISE 3 CODE HERE
 card = prompt("whats your cards numbers", "");
-if (i==1){
-  card=prompt("enter only integers please!", "");
-}
 var div = document.getElementById("credit-output");
 div.innerHTML = ``
   /*
@@ -198,25 +195,27 @@ div.innerHTML = ``
 function guess() {
 
   // WRITE YOUR EXERCISE 4 CODE HERE
+  let tries;
   let guess;
   let numb = Math.floor(Math.random() * 10) + 1; /*Change to 1000 when done*/
+
+for ( tries = 0; guess !=numb; tries++){
   guess = prompt("Will you guess what the number is?", "");
-
-  if (guess > numb){
-      var div = document.getElementById("guess-output");
-      div.innerHTML = `${guess} is too high!`
-      guess = prompt("try again?", "");
-    }
-    else if (guess < numb){
-    var div = document.getElementById("guess-output");
-    div.innerHTML =` ${guess} is to low!`
- }
-
-  if (guess===numb) {
-    var div = document.getElementById("guess-output");
-    div.innerHTML =` ${guess} is correct!`
+  while (guess <1 || guess >10){
+    guess = prompt("Guess what the number is ( 1-1000)");
   }
+  if (guess > numb) {
 
+    alert("last guess was too high!")
+  }else if (guess < numb) {
+      alert("last guess was too low!")
+    }
+ }
+if (guess === numb){
+  alert("congrats you guessed the right number!");
+}
+var div = document.getElementById("guess-output");
+div.innerHTML = "Random Number: " + numb + "<br/>Number of Attempts: " + tries;
   ////////////////// DO NOT MODIFY
   check('guess'); // DO NOT MODIFY
   ////////////////// DO NOT MODIFY
