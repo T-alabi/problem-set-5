@@ -154,9 +154,7 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-card = prompt("whats your cards numbers", "");
-var div = document.getElementById("credit-output");
-div.innerHTML = ``
+
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
    *       variable, do not modify it. If you find it necessary to manipulate
@@ -200,11 +198,11 @@ function guess() {
   let numb = Math.floor(Math.random() * 1000) + 1; /*Change to 1000 when done*/
 
 for ( tries = 0; guess !=numb; tries++){
-  guess = prompt("Will you guess what the number is?", "");
-  while (guess <1 || guess >1000){
-    guess = prompt("Guess what the number is ( 1-1000)");
-  }
-  if (guess > numb) {
+  do {
+    guess = Number(prompt("How tall should the tower be from 1 to 23, numbers only"));
+  } while(Number.isInteger(guess) == false || guess <1 || guess > 1000);
+
+  if (guess > numb){
 
     alert("last guess was too high!")
   }else if (guess < numb) {
@@ -250,16 +248,29 @@ function hurricane() {
   ///////////////// DO NOT MODIFY
   let windspeed; // DO NOT MODIFY
   ///////////////// DO NOT MODIFY
-  let tropical = ((windspeed>39)||(windspeed<73));
-windspeed = prompt("whats the speed outside?", "");
-while (windspeed = tropical){
-  var div = document.getElementById("hurricane-output");
-  div.innerHTML=`${windspeed} is a tropical storm!`
-if (windspeed!=tropical) {
-  windspeed = prompt("use inegetrs only", "");
-}
+
+while (windspeed < 0 || Number.isInteger(windspeed)==false){
+    windspeed = Number(prompt("whats the wind speed in MPH? Integers only."));
 }
 
+let div=document.getElementById("hurricane-output");
+
+if (windspeed >= 37 && windspeed <= 73) {
+  div.innerHTML = "Tropical Storm";
+} else if (windspeed >= 74 && windspeed <= 95) {
+  div.innerHTML = "Category 1 Hurricane.";
+} else if (windspeed >= 96 && windspeed <= 110) {
+  div.innerHTML = "Category 2 Hurricane.";
+} else if (windspeed >= 111 && windspeed <= 129) {
+  div.innerHTML = "Category 3 Hurricane.";
+} else if (windspeed >= 130 && windspeed <= 156) {
+  div.innerHTML = "Category 4 Hurricane.";
+} else if (windspeed >= 157) {
+  div.innerHTML = "Category 5 Hurricane.";
+}
+else if (windspeed < 37){
+  div.innerHTML = `The skies are calm...`
+}
   ///////////////////////////////// DO NOT MODIFY
   check('hurricane', windspeed); // DO NOT MODIFY
   ///////////////////////////////// DO NOT MODIFY
