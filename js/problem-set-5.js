@@ -256,7 +256,7 @@ while (windspeed < 0 || Number.isInteger(windspeed)==false){
 let div=document.getElementById("hurricane-output");
 
 if (windspeed >= 37 && windspeed <= 73) {
-  div.innerHTML = "Tropical Storm";
+  div.innerHTML = "Tropical Storm.";
 } else if (windspeed >= 74 && windspeed <= 95) {
   div.innerHTML = "Category 1 Hurricane.";
 } else if (windspeed >= 96 && windspeed <= 110) {
@@ -313,7 +313,41 @@ function gymnastics() {
    *       scores.push(firstScore);   // your variable names for your scores
    *       scores.push(secondScore);  // will likely be different than mine
    */
+   do {
+       score1 = Number(prompt("Please enter a score."));
+     } while (score1 < 0.0 || score1 > 10.0 || !Number.isInteger(score1));
+     scores.push(score1);
 
+     do {
+       score2 = Number(prompt("Please enter a score."));
+     } while (score2 < 0.0 || score2 > 10.0 || !Number.isInteger(score2));
+     scores.push(score2);
+
+     do {
+       score3 = Number(prompt("Please enter a score."));
+     } while (score3 < 0.0 || score3 > 10.0 || !Number.isInteger(score3));
+     scores.push(score3);
+
+     do {
+       score4 = Number(prompt("Please enter a score."));
+     } while (score4 < 0.0 || score4 > 10.0 || !Number.isInteger(score4));
+     scores.push(score4);
+
+     do {
+       score5 = Number(prompt("Please enter a score."));
+     } while (score5 < 0.0 || score5 > 10.0 || !Number.isInteger(score5));
+     scores.push(score5);
+
+     do {
+       score6 = Number(prompt("Please enter a score."));
+     } while (score6 < 0.0 || score6 >10.0 || !Number.isInteger(score6));
+     scores.push(score6);
+
+   total = Number(score1) + Number(score2) + Number(score3) + Number(score4) + Number(score5) + Number(score6);
+   let average = (total - Math.max(score1, score2, score3, score4, score5, score6) - Math.min(score1, score2, score3, score4, score5, score6)) / 4;
+   var p = document.getElementById("gymnastics-output");
+   p.innerHTML = "Discarded: " + Math.min(score1, score2, score3, score4, score5, score6) +
+   ", " + Math.max(score1, score2, score3, score4, score5, score6) + "</br>" + "Score: " + average.toFixed(2);
   /////////////////////////////// DO NOT MODIFY
   check('gymnastics', scores); // DO NOT MODIFY
   /////////////////////////////// DO NOT MODIFY
