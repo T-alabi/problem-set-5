@@ -435,6 +435,14 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
+   //tests
+   let testinput;
+   for ()
+do{testinput = Number(prompt("enter the test grade"));
+if (testinput === -1){
+  break;
+}
+} while (Number.isInteger(testinput) == false || testinput > 0 || testinput < 100)
 
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
