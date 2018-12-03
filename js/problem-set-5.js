@@ -154,6 +154,16 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
+  let oddTotal=0;
+    let evenTotal=0;
+    while (true){
+      card=prompt("Enter your credit card number: ");
+    if ((card.length==16 || card.length==15 || card.length==13) && Number.isInteger(Number(card)))
+    break;}
+
+    
+
+    card=Number(card);
 
   /*
    * NOTE: After reading in the card number and storing it in the 'card'
