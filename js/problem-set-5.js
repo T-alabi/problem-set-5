@@ -154,6 +154,7 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
+  var div = doument.getElementById("credit-output");
   let oddTotal=0;
     let evenTotal=0;
     while (true){
@@ -177,17 +178,16 @@ function credit() {
     console.log(oddTotal);
 
     if (card.length==15 && (card[0]==3 &&(card[1]==7 || card[1]==4)) && (oddTotal+evenTotal)%10==0){
-      document.getElementById("credit-output").innerHTML="<img src ='./images/amex.png'/>";
+      div.innerHTML="<img src ='./images/amex.png'/>";
     }
     else if ((card.length==13 || card.length==16) && card[0]==4 && (oddTotal+evenTotal)%10==0){
-      document.getElementById("credit-output").innerHTML="<img src ='./images/visa.png'/>";
+    div.innerHTML="<img src ='./images/visa.png'/>";
     }
     else if (card.length==16 && (card[0]==5 && (card[1]==1 || card[1]==2 || card[1]==4 || card[1]==5)) && (oddTotal+evenTotal)%10==0){
-      document.getElementById("credit-output").innerHTML="<img src ='./images/mastercard.png'/>";
-    }
-    else {
-      document.getElementById("credit-output").innerHTML="<img src ='./images/Invalid.png'/>";
-    }
+      div.innerHTML="<img src ='./images/mastercard.png'/>";
+  }else{
+    document.getElementById("credit-output").innerHTML="<img src ='pset5/images/invalid.png'/>";
+  }
 
     card=Number(card);
 
