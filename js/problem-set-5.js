@@ -187,7 +187,7 @@ function credit() {
       div.innerHTML="<img src ='./images/mastercard.png'/>";
     }
     else {
-  div.innerHTML="<img src='./images/invalid.png'/>";
+  div.innerHTML="<img src='./images/invalid.png'/>"; 
 }
     card=Number(card);
 
