@@ -158,7 +158,7 @@ function credit() {
     let evenTotal=0;
     while (true){
       card=prompt("Enter your credit card number: ");
-    if ((card.length==16 ) && Number.isInteger(Number(card)))
+    if ((card.length==16 || card.length ==15 || card.length ==13 ) && Number.isInteger(Number(card)))
     break;}
 
     for(let i=card.length-2;i>=0;i-=2) {
@@ -435,14 +435,6 @@ function reportCard() {
    *       representative of the number of tests, quizzes, and homework
    *       grades the user enters, respectively.
    */
-   //tests
-   let testinput;
-   for ()
-do{testinput = Number(prompt("enter the test grade"));
-if (testinput === -1){
-  break;
-}
-} while (Number.isInteger(testinput) == false || testinput > 0 || testinput < 100)
 
   /////////////////////// DO NOT MODIFY
   check('report-card', // DO NOT MODIFY
