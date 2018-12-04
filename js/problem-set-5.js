@@ -154,7 +154,7 @@ function credit() {
   //////////// DO NOT MODIFY
 
   // WRITE YOUR EXERCISE 3 CODE HERE
-  var div = doument.getElementById("credit-output");
+  var div = document.getElementById("credit-output");
   let oddTotal=0;
     let evenTotal=0;
     while (true){
@@ -185,10 +185,10 @@ function credit() {
     }
     else if (card.length==16 && (card[0]==5 && (card[1]==1 || card[1]==2 || card[1]==4 || card[1]==5)) && (oddTotal+evenTotal)%10==0){
       div.innerHTML="<img src ='./images/mastercard.png'/>";
-  }else{
-    document.getElementById("credit-output").innerHTML="<img src ='pset5/images/invalid.png'/>";
-  }
-
+    }
+    else {
+  div.innerHTML="<img src='./images/invalid.png'/>";
+}
     card=Number(card);
 
   /*
