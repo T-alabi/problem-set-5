@@ -186,7 +186,7 @@ function credit() {
       document.getElementById("credit-output").innerHTML="<img src ='./images/mastercard.png'/>";
     }
     else {
-      document.getElementById("credit-output").innerHTML="<img src ='./images/invalid.png'/>";
+      document.getElementById("credit-output").innerHTML="<img src ='./images/Invalid.png'/>";
     }
 
     card=Number(card);
