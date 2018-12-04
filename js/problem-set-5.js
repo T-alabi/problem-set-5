@@ -429,7 +429,49 @@ function reportCard() {
   let quizzes = 0; //// DO NOT MODIFY
   let homeworks = 0; // DO NOT MODIFY
   ///////////////////// DO NOT MODIFY
-
+  let div= document.getElementById("report-card-output");
+  testscore = Number(prompt('Enter a test score between 0 and 100. Enter -1 when you have done.'));
+  while (testscore){
+    if (testscore == -1){
+      testscore = false;
+      break;
+    }
+    else if(testscore <= 100 && 0 <= testscore){
+      tests = tests + 1;
+      testTotal =testTotal + testscore;
+    }
+  testscore = prompt('Enter a test score between 0 and 100. Enter -1 when you have done.')
+  }
+  quizscore = Number(prompt('Enter a quiz score between 0 and 100. Enter -1 when you have done.'));
+    while (quizscore) {
+      if (quizscore == -1){
+       quizscore = false;
+       break;
+      }
+      else if(quizscore <= 100 && 0 <= quizscore){
+       quizzes = quizzes + 1;
+       quizTotal = quizTotal + quizscore;
+      }
+  quizscore = Number(prompt('Enter a quiz score between 0 and 100. Enter -1 when you have done.'));
+  }
+  homeworkscore = Number(prompt('Enter a homework score between 0 and 100. Enter -1 when you have done.'));
+  while (homeworkscore){
+    if(homeworkscore == -1){
+     homeworkscore = false;
+     break;
+    }
+    else if(homeworkscore <= 100 && 0 <= homeworkscore){
+     homeworks = homeworks + 1;
+     homeworkTotal = homeworkTotal+ homeworkscore;
+    }
+    homeworkscore = Number(prompt('Enter a homework score between 0 and 100. Enter -1 when you have done.'));
+  }
+  testAverage = testTotal/tests;
+  quizAverage = quizTotal/quizzes;
+  homeworkAverage = homeworkTotal/homeworks;
+  totalAverage = (testAverage * 0.6) + (quizAverage * 0.3) + (homeworkAverage * 0.1);
+  div.innerHTML = "Tests: " + testAverage.toFixed(2) +
+   "</br>Quizzes: " + quizAverage.toFixed(2) + "</br>Homework: " + homeworkAverage.toFixed(2) + "</br>Grade: " + totalAverage.toFixed(2);
   /*
    * NOTE: The 'tests', 'quizzes', and 'homeworks' variables should be
    *       representative of the number of tests, quizzes, and homework
